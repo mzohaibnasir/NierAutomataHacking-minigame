@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3878868392575683519}
   - component: {fileID: 3296326546195132979}
   - component: {fileID: 6985638022751550551}
-  - component: {fileID: 8199124718943086429}
+  - component: {fileID: -8270394987717615549}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -109,9 +109,9 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &8199124718943086429
+--- !u!114 &-8270394987717615549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2005375002510341804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 273d0c45ba8efe9a49f525ef036de730, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c2e2023e2b5e747811228f1bc44de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aliveTime: 0
-  damage: 0
   moveSpeed: 0
+  playerTriggered: {fileID: 8526445134048886630, guid: e395376b133b2040eb4e7deb82b2eddd,
+    type: 3}

@@ -75,7 +75,7 @@ public class BulletMovement : MonoBehaviour
             //accessing other class
             // enemyTriggered.GetComponent<Enemy>().health-=damage;
             Enemy.health-=damage;
-            Debug.Log(Enemy.health);
+            // Debug.Log(Enemy.health);
             
         }
             
