@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBulletMovement : MonoBehaviour
 {
     // public float aliveTime;
-    // public float damage;
+    public float damage;
 
     public float moveSpeed;
     // public GameObject _bulletSpawn;
@@ -18,7 +18,7 @@ public class EnemyBulletMovement : MonoBehaviour
     void Start()
     {
         // aliveTime = 5.0f;
-        // damage=10.0f;
+        damage=25.0f;
         moveSpeed=30.0f;
         // this.transform.rotation=_bulletSpawn.transform.rotation;
         playerRigidbody=playerTriggered.GetComponent<Rigidbody>();
@@ -35,7 +35,7 @@ public class EnemyBulletMovement : MonoBehaviour
         //  float singleStep = moveSpeed * Time.deltaTime;
         //  Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
-        
+
         // this.transform.Translate (0, moveSpeed, 0, Space.Self);
         // playerRigidbody.AddForce(transform.forward*50.0f);
         // playerRigidbody.AddForce(transform.forward*50.0f, ForceMode.Impulse);
@@ -71,21 +71,10 @@ public class EnemyBulletMovement : MonoBehaviour
 
     }
 
-    // private void OnTriggerEnter(Collider other) {
-    //     Debug.Log("Walls Trigerred");
-    //     if (other.gameObject.CompareTag("Walls"))
-    //     {
-    //         Debug.Log("Walls");
-    //         Color black = new Color(0.0f, 0.0f, 0.0f,1.0f);
-    //         other.gameObject.GetComponent<Renderer>().material.color=black;
-    //         Destroy(this.gameObject);
-            
-    //     }
-    // }
 
     
 
-    // private void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter(Collision other) {
         // if (other.gameObject.CompareTag("Walls"))
         // {
         //     // Debug.Log("Walls");
@@ -95,21 +84,28 @@ public class EnemyBulletMovement : MonoBehaviour
             
         // }
 
-        // if (other.gameObject.CompareTag("Enemy"))
-        // {
-        //     Debug.Log("Enemy");
-        //     // Color black = new Color(0.0f, 0.0f, 0.0f,1.0f);
-        //     Color newColor = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f),1.0f);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player fired");
+            // Color black = new Color(0.0f, 0.0f, 0.0f,1.0f);
+            // Color newColor = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f),1.0f);
             
-        //     other.gameObject.GetComponent<Renderer>().material.color=newColor;
-        //     Destroy(this.gameObject);
-        //     //accessing other class
-        //     // enemyTriggered.GetComponent<Enemy>().health-=damage;
-        //     Enemy.health-=damage;
-        //     Debug.Log(Enemy.health);
-            
-        // }
+            // other.gameObject.GetComponent<Renderer>().material.color=newColor;
+            // Destroy(other.gameObject);
+            //accessing other class
+            // enemyTriggered.GetComponent<Enemy>().health-=damage;
+            Player.playerHealth-=damage;
+            Debug.Log("Player:"+Player.playerHealth);
+            // if (Player.playerHealth<=0)
+            // {
+            //     // Destroy(other.gameObject);
+            //     Debug.Log("Player:"+Player.playerHealth);
+
+            // }
+        }
             
         
-    // }
+            
+        
+    }
 }

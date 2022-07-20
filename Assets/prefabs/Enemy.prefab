@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9166369172600923133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39, y: 1, z: 3.29}
+  m_LocalPosition: {x: 0, y: 1, z: 1.82}
   m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
   m_Children:
   - {fileID: 9166369172638704378}
@@ -162,7 +162,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9166369172638704378}
-  - component: {fileID: 9166369172638704357}
   m_Layer: 0
   m_Name: EnemyBulletSpawn
   m_TagString: Untagged
@@ -177,23 +176,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9166369172638704379}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9166369172801380846}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!114 &9166369172638704357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166369172638704379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7de4c36e6145c43adf20e3a29cd254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 8526445134048886630, guid: e395376b133b2040eb4e7deb82b2eddd, type: 3}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
