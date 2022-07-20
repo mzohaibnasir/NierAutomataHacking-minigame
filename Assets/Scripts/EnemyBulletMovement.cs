@@ -31,6 +31,11 @@ public class EnemyBulletMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //  Vector3 targetDirection = playerRigidbody.transform.position - transform.position;
+        //  float singleStep = moveSpeed * Time.deltaTime;
+        //  Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        
         // this.transform.Translate (0, moveSpeed, 0, Space.Self);
         // playerRigidbody.AddForce(transform.forward*50.0f);
         // playerRigidbody.AddForce(transform.forward*50.0f, ForceMode.Impulse);
@@ -46,9 +51,9 @@ public class EnemyBulletMovement : MonoBehaviour
         // }
                 // this.gameObject.GetComponent<Rigidbody>().AddForce(0.0f,0.0f,19.0f);
 
-        transform.LookAt(playerTriggered.transform);
+        // transform.LookAt(playerTriggered.transform);
         // Debug.Log("BulletMovement"+ position);
-        this.transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+        this.transform.Translate(transform.forward * Time.deltaTime * moveSpeed);
         // Debug.Log("Current position:"+playerTriggered.gameObject.transform.position);   
         // this.transform.Translate(playerTriggered.gameObject.transform.position * Time.deltaTime *moveSpeed);
         //  this.transform.Translate(transform.forward * Time.deltaTime *moveSpeed);
